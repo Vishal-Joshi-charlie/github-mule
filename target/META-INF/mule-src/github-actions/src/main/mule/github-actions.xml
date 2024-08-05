@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="ca6038f7-5a9e-4d99-9429-6c05130c6d10" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="github-actionsFlow" doc:id="9464cc10-b295-403b-a8b3-cab053b4148b" >
+		<http:listener doc:name="Listener" doc:id="3960777b-7777-4fef-9174-ff9c9c54f245" config-ref="HTTP_Listener_config" path="/build"/>
+		<logger level="INFO" doc:name="Logger" doc:id="1d02fad9-3af3-4c59-ac15-62530b0831cd" message='#["Hello You are Welcome"]'/>
+	</flow>
+</mule>

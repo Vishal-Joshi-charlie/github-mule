@@ -1,0 +1,24 @@
+{
+  "configs": [
+    "github-actions.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "fa3c6048-732d-481e-9185-7f5aab666d1d:github-actions:1.0.0",
+  "minMuleVersion": "4.4.0",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "github-actions.xml",
+        "log4j2.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
